@@ -1,12 +1,26 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-background-fetch",
+        {
+          "enabled": true
+        }
+      ],
+      [
+        "expo-task-manager",
+        {
+          "enabled": true
+        }
+      ]
+    ],
     "name": "offnotif4",
     "slug": "offnotif4",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -19,10 +33,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.WAKE_LOCK"
+      ],
+      "package": "com.felves29.offnotif4"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3b0d1eaf-1824-48c0-b38a-3db0b1cd17b3"
+      }
     }
   }
 }
